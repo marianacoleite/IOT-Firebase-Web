@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Switch */
+  .switch {
+    width: 60px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .switch.on {
+    background: #4caf50;
+  }
+  
+  .switch-toggle {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s;
+  }
+  
+  .switch.on .switch-toggle {
+    left: 31px;
+  }
+  
+  /* Lamp button */
+  .lamp-button {
+    font-size: 24px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: color 0.3s ease;
+    user-select: none;
+  }
+  
+  .lamp-button:hover {
+    color: #f1c40f;
+  }
+  
+  .lamp-button.on {
+    color: #f39c12;
+  }
+  
+  /* Animação fade-in para LED */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .led-on-animation {
+    animation: fadeIn 0.4s ease-out;
+  }
+  
+  /* Glow pulsante para LED */
+  .glow {
+    box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: pulseGlow 1.5s infinite;
+  }
+  
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 15px 6px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+      box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.6);
+    }
+  }
+  

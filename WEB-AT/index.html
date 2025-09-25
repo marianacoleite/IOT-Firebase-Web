@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Controle de LEDs com Lâmpada</title>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <h1>Controle do LED Vermelho</h1>
+  <p>Status: <span id="statusVermelho">Desconhecido</span></p>
+  <div class="container">
+    <div class="switch" id="switchVermelho">
+      <div class="switch-toggle"></div>
+    </div>
+    <img src="img/ledapagada.png" id="imgVermelho" width="30" height="30" alt="LED Vermelho" />
+    <button class="lamp-button" id="lampVermelho" title="Ligar/Desligar LED Vermelho"></button>
+  </div>
+
+  <h1>Controle do LED Amarelo</h1>
+  <p>Status: <span id="statusAmarelo">Desconhecido</span></p>
+  <div class="container">
+    <div class="switch" id="switchAmarelo">
+      <div class="switch-toggle"></div>
+    </div>
+    <img src="img/ledapagada.png" id="imgAmarelo" width="30" height="30" alt="LED Amarelo" />
+    <button class="lamp-button" id="lampAmarelo" title="Ligar/Desligar LED Amarelo"></button>
+  </div>
+
+  <h1>Controle do LED Verde</h1>
+  <p>Status: <span id="statusVerde">Desconhecido</span></p>
+  <div class="container">
+    <div class="switch" id="switchVerde">
+      <div class="switch-toggle"></div>
+    </div>
+    <img src="img/ledapagada.png" id="imgVerde" width="30" height="30" alt="LED Verde" />
+    <button class="lamp-button" id="lampVerde" title="Ligar/Desligar LED Verde"></button>
+  </div>
+
+</body>
+</html>
